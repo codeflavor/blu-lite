@@ -1,0 +1,29 @@
+{
+  "name": "Blu-lite",
+  "version": "0.0.1",
+  "description": "Blu Lite - Frontend assets",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Palade",
+  "repository": "https://github.com/PI-Victor/blu-lite",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.0",
+    "eslint-config-standard": "^5.3.1",
+    "eslint-plugin-promise": "^1.3.1",
+    "eslint-plugin-standard": "^1.3.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-eslint": "^18.1.0",
+    "grunt-timer": "^0.6.0",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}
