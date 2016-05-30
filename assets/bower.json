@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "semantic": "semantic-ui#^2.1.8",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "react": "^15.1.0"
   }
 }
