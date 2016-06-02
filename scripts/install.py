@@ -19,16 +19,16 @@ cmd_build = 'go build -o {}/blulite'.format(output_dir)
 def handle_output(just_clean=False):
     shutil.rmtree(os.path.dirname(os.path.dirname(output_dir)), ignore_errors=True)
     if just_clean:
+        print('Cleaned...')
         return
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         return
 
-def install():
+def build():
     handle_output()
     os.chdir(bin_dir)
-    print('Installed in {}'.format(output_dir))
     build = subprocess.Popen(cmd_build,
                         shell=True,
                         stdout=subprocess.PIPE,
@@ -38,9 +38,10 @@ def install():
         print(stdout)
     if stderr != b'':
         print(stderr)
+    print('Compiled to {}/blulite, consider linking it to $GOBIN.'.format(output_dir))
 
-if arg == 'install':
-    install()
+if arg == 'build':
+    build()
 
 if arg == 'clean':
     handle_output(True)
