@@ -33,14 +33,13 @@ module.exports = function (grunt) {
       }
     }
   })
-
   grunt.registerTask('default', [
     'eslint',
     'jshint'
   ])
 
   grunt.registerTask('install', [
-    'bower_install,'
+    'bower_install'
   ])
 
   // Build task
