@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install",
-    "build": "browserify src/app.js -o build/app.js -t [babelify --presets react]",
-    "watch": "watchify src/app.js -o build/app.js -t [babelify --presets react] -dv"
+    "build": "browserify src/blulite.js -o build/app.js -t [babelify --presets react]",
+    "watch": "watchify src/blulite.js -o build/app.js -t [babelify --presets react] -dv"
   },
   "author": "Victor Palade",
   "repository": "https://github.com/PI-Victor/blu-lite",
