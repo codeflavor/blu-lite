@@ -1,16 +1,14 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
 
-var App = React.createClass({
+var BluLIte = React.createClass({
   render: function () {
     return (
-      <div className="ui input">
-        <input type="text" placeholder="Username..."></input>
-      </div>
+      <h1>Hello World!</h1>
     )
   }
 })
 
 ReactDOM.render(
-  <App/>, document.getElementById('content')
+  <BluLIte />, document.getElementById('test')
 )
