@@ -1,6 +1,45 @@
-#login-form {
-  padding: 15px;
-  width: 400px;
-  min-height: 400px;
-  margin: 2% auto 0 auto;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#login-form{
+  margin: 0 auto;
+  position: relative;
+  width: 27%;
+  padding: 2%;
+  margin: 130px auto 0;
+}
+
+.forgotLink {
+  margin: 30px auto;
+  border-bottom: 1px solid;
+  border-color: #cbd2d6;
+  padding-bottom: 20px;
+}
+
+#submit {
+  padding-top: 10px;
+  height: 40px;
+}
+
+#menu {
+  height: 10%;
+}
+
+#footer{
+  text-align: center;
+  color: gray;
+  width: 37%;
+  padding: 2%;
+  margin: 0 auto;
+}
+
+hr {
+   display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #ccc;
+   margin: 1em 0;
+   padding: 10;
 }
