@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-#login-form{
+#login-form {
   margin: 0 auto;
   position: relative;
   width: 27%;
@@ -27,7 +27,7 @@ body {
   height: 10%;
 }
 
-#footer{
+#footer {
   text-align: center;
   color: gray;
   width: 37%;
