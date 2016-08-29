@@ -38,7 +38,7 @@ var Login = React.createClass({
             <div className='ui fluid blue submit button' id='submit'>Log In</div>
           </div>
           <div className='forgotLink'>
-            <a href='#/trouble'>Having trouble logging in?</a>
+            <a href='#trouble'>Having trouble logging in?</a>
           </div>
         </form>
         <div className='g-signin2' data-onsuccess='onSignIn' data-theme='dark'></div>
