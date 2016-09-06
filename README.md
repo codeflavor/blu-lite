@@ -4,4 +4,3 @@ Blu Lite
 [![Apache](https://img.shields.io/badge/license-Apache%20License%202.0-E91E63.svg?style=flat-square)](http://www.apache.org/licenses/)
 
 Blu Lite is an issue and tracker focused on operations.
-This repo contains the [frontend assets](assets/) and instructions on how to [compile them](assets/README.md).
