@@ -3,11 +3,17 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "4KcCyGRFquWUgZaljRgjPbk7i7o=",
+			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
+			"path": "github.com/golang/glog",
+			"revision": "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+			"revisionTime": "2016-01-25T20:49:56Z"
+		},
+		{
+			"checksumSHA1": "fEGgcE+iSzLkxdrbRj7j/vV7a7E=",
 			"path": "github.com/spf13/cobra",
-			"revision": "c678ff029ee250b65714e518f4f5c5cb934955de",
-			"revisionTime": "2016-03-22T12:10:42-05:00"
+			"revision": "9c28e4bbd74e5c3ed7aacbc552b2cab7cfdfe744",
+			"revisionTime": "2016-08-30T17:49:25Z"
 		}
 	],
-	"rootPath": "github.com/PI-Victor/blu-lite"
+	"rootPath": "github.com/PI-Victor/servops-backend"
 }
