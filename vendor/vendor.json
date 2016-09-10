@@ -13,7 +13,13 @@
 			"path": "github.com/spf13/cobra",
 			"revision": "9c28e4bbd74e5c3ed7aacbc552b2cab7cfdfe744",
 			"revisionTime": "2016-08-30T17:49:25Z"
+		},
+		{
+			"checksumSHA1": "1D8GzeoFGUs5FZOoyC2DpQg8c5Y=",
+			"path": "gopkg.in/mgo.v2",
+			"revision": "3f83fa5005286a7fe593b055f0d7771a7dce4655",
+			"revisionTime": "2016-08-18T02:01:20Z"
 		}
 	],
-	"rootPath": "github.com/PI-Victor/servops-backend"
+	"rootPath": "github.com/codeflavor/servops"
 }
