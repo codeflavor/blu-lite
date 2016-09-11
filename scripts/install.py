@@ -11,10 +11,10 @@ import shutil
 arg = sys.argv[1]
 
 work_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-bin_dir = "{}".format(os.path.join(work_dir, 'cmd', 'blulite'))
+bin_dir = "{}".format(os.path.join(work_dir, 'cmd', 'servops'))
 arch = '{}_{}'.format(platform.system(), platform.machine())
 output_dir = os.path.join(work_dir, '_output', arch, 'bin')
-cmd_build = 'go build -o {}/blulite'.format(output_dir)
+cmd_build = 'go build -o {}/servops'.format(output_dir)
 
 def handle_output(just_clean=False):
     shutil.rmtree(os.path.dirname(os.path.dirname(output_dir)), ignore_errors=True)
@@ -38,7 +38,7 @@ def build():
         print(stdout)
     if stderr != b'':
         print(stderr)
-    print('Compiled to {}/blulite, consider linking it to $GOBIN.'.format(output_dir))
+    print('Compiled to {}/servops, consider linking it to $GOBIN.'.format(output_dir))
 
 if arg == 'build':
     build()
