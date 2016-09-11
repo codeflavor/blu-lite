@@ -5,4 +5,4 @@ ServOps
 
 This is the REST API for ServOps, an issue tracker for Ops.
 
-ServOps is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/)
+ServOps is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
