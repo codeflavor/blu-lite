@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/PI-Victor/blu-lite/pkg/cmd"
+	"github.com/codeflavor/servops/pkg/cmd"
 )
 
 func main() {
@@ -13,10 +13,10 @@ func main() {
 
 // RootCmd prints instructions about how to start the API Server.
 var RootCmd = &cobra.Command{
-	Use:   "blulite",
-	Short: "Blu Lite API Server",
+	Use:   "servops",
+	Short: "servops API Server",
 	Example: `
-Specify the application working directory with bluelite start
+Specify the application working directory with servops start
 --workdir=/path/to/dir. The application will try to find and validate the
 config.yml file in the specified working directory. If validation fails, it
 will exist with an error. If no config file is found, it will create one with
