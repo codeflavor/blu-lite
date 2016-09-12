@@ -4,5 +4,3 @@ ServOps
 [![Apache](https://img.shields.io/badge/license-Apache%20License%202.0-E91E63.svg?style=flat-square)](http://www.apache.org/licenses/)
 
 This is the REST API for ServOps, an issue tracker for Ops.
-
-ServOps is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
