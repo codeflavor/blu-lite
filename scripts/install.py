@@ -34,10 +34,11 @@ def build():
                         stdout=subprocess.PIPE,
                         stderr=subprocess.PIPE)
     stdout, stderr = build.communicate()
-    if stdout != b'':
-        print(stdout)
     if stderr != b'':
         print(stderr)
+    if stdout != b'':
+        print(stdout)
+        sys.exit(1)
     print('Compiled to {}/servops, consider linking it to $GOBIN.'.format(output_dir))
 
 if arg == 'build':
