@@ -1,11 +1,11 @@
 build:
 	@echo 'Compiling blulite API...'
-	@/bin/python3 scripts/install.py build
+	@scripts/build.sh build
 
 swagger:
 	@echo 'Generating Swagger Specs...'
-	@/bin/python3 scripts/swagger.py
+	@scripts/swagger.sh
 
 clean:
 	@echo 'Cleaning build folder'
-	@/bin/python3 scripts/install.py clean
+	@scripts/build.sh clean
