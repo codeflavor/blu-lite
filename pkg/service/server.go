@@ -6,7 +6,7 @@ import (
 
 	"github.com/golang/glog"
 
-	"github.com/codeflavor/servops/pkg/config"
+	c "github.com/codeflavor/servops/pkg/config"
 )
 
 func rootHandle(w http.ResponseWriter, r *http.Request) {
@@ -14,10 +14,10 @@ func rootHandle(w http.ResponseWriter, r *http.Request) {
 }
 
 // StartServer instantiates a new server connection
-func StartServer(appConfig *config.AppConfig) error {
+func StartServer(conf *c.AppConfig) error {
 	glog.V(0).Info("Trying to start Database instance...")
-	if err := InstatiateDbService(appConfig); err != nil {
-		return fmt.Errorf("error: An error occured while instantiating the database service %v", err)
+	if err := InstatiateDbService(conf); err != nil {
+		return fmt.Errorf("error: An error occured while instantiating the database service: %v", err)
 	}
 	// NOTE: by the time we get here, we should already have a config either self
 	// generated, or user set,
@@ -26,7 +26,10 @@ func StartServer(appConfig *config.AppConfig) error {
 	// bind server according to specified configuration
 	http.HandleFunc("/", rootHandle)
 	// NOTE: this should be config assigned
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	APP_URI := fmt.Sprintf("%s:%s", conf.Host, conf.Port)
+	glog.V(0).Infof("Starting server on: %s", APP_URI)
+
+	if err := http.ListenAndServe(APP_URI, nil); err != nil {
 		return err
 	}
 	return nil
