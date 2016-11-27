@@ -1,6 +1,14 @@
 build:
 	@echo 'Compiling blulite API...'
-	@scripts/build.sh build
+	@cd cmd/servops && go build -o ../../_out/bin/servops -v .
+
+clean:
+	@echo 'Removing old _out dir'
+	@rm -rf ./_out
+
+start:
+	@echo 'Starting server'
+	@_out/bin/servops start
 
 swagger:
 	@echo 'Generating Swagger Specs...'
