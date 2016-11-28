@@ -12,8 +12,10 @@ import (
 
 // createDefaults creates default settings for the application.
 func createDefaults(wd string) (*c.AppConfig, error) {
-	var cwd string
-	var err error
+	var (
+		cwd string
+		err error
+	)
 
 	if wd == "" {
 		cwd, err = os.Getwd()
@@ -35,7 +37,7 @@ func createDefaults(wd string) (*c.AppConfig, error) {
 		if err != nil {
 			return nil, err
 		}
-	} else {
+	} else if err != nil {
 		return nil, err
 	}
 	if err := saveDefaults(conf); err != nil {
@@ -71,7 +73,7 @@ func saveDefaults(c *c.AppConfig) error {
 	}
 
 	defer handler.Close()
-	encodeConf, err := json.MarshalIndent(c, "", "")
+	encodeConf, err := json.MarshalIndent(c, "", " ")
 	if err != nil {
 		return err
 	}
