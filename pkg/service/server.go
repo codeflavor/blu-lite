@@ -16,7 +16,7 @@ func rootHandle(w http.ResponseWriter, r *http.Request) {
 // StartServer instantiates a new server connection
 func StartServer(conf *c.AppConfig) error {
 	glog.V(0).Info("Trying to start Database instance...")
-	if err := InstatiateDbService(conf); err != nil {
+	if err := InstatiateDBService(conf); err != nil {
 		return fmt.Errorf("error: An error occured while instantiating the database service: %v", err)
 	}
 	// NOTE: by the time we get here, we should already have a config either self
