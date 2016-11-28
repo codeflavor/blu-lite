@@ -68,7 +68,7 @@ func saveDefaults(c *c.AppConfig) error {
 		if err != nil {
 			return err
 		}
-	} else {
+	} else if err != nil {
 		return err
 	}
 
