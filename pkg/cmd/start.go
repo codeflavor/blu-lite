@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"github.com/codeflavor/servops/pkg/cmd/start"
 	"github.com/spf13/cobra"
+
+	"github.com/codeflavor/servops/pkg/cmd/start"
 )
 
 var (
