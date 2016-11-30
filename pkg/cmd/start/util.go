@@ -62,13 +62,11 @@ func loadUserConfig(workdir string) (*c.AppConfig, error) {
 func saveDefaults(c *c.AppConfig) error {
 	var handler *os.File
 	_, err := os.Stat(c.ConfFile)
-
-	if os.IsNotExist(err) {
-		handler, err = os.Create(c.ConfFile)
-		if err != nil {
-			return err
-		}
-	} else if err != nil {
+	if err != nil && !os.IsNotExist(err) {
+		return err
+	}
+	handler, err = os.Create(c.ConfFile)
+	if err != nil {
 		return err
 	}
 
@@ -79,6 +77,10 @@ func saveDefaults(c *c.AppConfig) error {
 	}
 
 	_, err = handler.Write(encodeConf)
+	glog.V(0).Infof("this is the conf: %#v", c.ConfFile)
+	glog.V(0).Infof("the err: %#v", err)
+	glog.V(0).Infof("the encoded: %#v", handler)
+
 	if err != nil {
 		return err
 	}
