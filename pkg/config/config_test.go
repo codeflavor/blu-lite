@@ -11,7 +11,8 @@ import (
 const (
 	workDir  = "/test"
 	confFile = "/test/servops.yaml"
-	loglevel = "5"
+	confDir  = "/test/config.servops"
+	loglevel = 5
 
 	user = "test1"
 	pass = "test1"
@@ -22,8 +23,8 @@ var (
 	session = &mgo.Session{}
 )
 
-func newTestDBConfig() *dbConfig {
-	return &dbConfig{
+func newTestDBConfig() *DBConfig {
+	return &DBConfig{
 		UserName: user,
 		Password: pass,
 		URL:      url,
@@ -31,15 +32,16 @@ func newTestDBConfig() *dbConfig {
 }
 
 func TestNewAppConfig(t *testing.T) {
-	dbConfig := newTestDBConfig()
-	testAppConfig := &AppConfig{
+	dbConf := newTestDBConfig()
+	testAppConf := &AppConfig{
 		WorkDir:  workDir,
+		ConfDir:  confDir,
 		ConfFile: confFile,
-		DbConf:   *dbConfig,
+		DBConf:   *dbConf,
 		LogLevel: loglevel,
 	}
-	AppConfInstance := newAppConfig(workDir, confFile, loglevel, dbConfig)
-	if !reflect.DeepEqual(testAppConfig, AppConfInstance) {
-		t.Errorf("Expected new instance to match: %#v, got %#v", testAppConfig, AppConfInstance)
+	AppConfInst := NewAppConfig(workDir, confFile, confDir, loglevel, dbConf)
+	if !reflect.DeepEqual(testAppConf, AppConfInst) {
+		t.Errorf("Expected new instance to match: %#v, got %#v", testAppConf, AppConfInst)
 	}
 }
