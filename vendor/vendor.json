@@ -3,22 +3,10 @@
 	"ignore": "test",
 	"package": [
 		{
-			"checksumSHA1": "XwQS0N02aPFGYJ0tjPiiBD0G4e4=",
-			"path": "github.com/ant0ine/go-json-rest/rest",
-			"revision": "4f1814e6e38174c46a6cccdda906987d04b735f6",
-			"revisionTime": "2016-08-28T00:39:24Z"
-		},
-		{
 			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
 			"path": "github.com/golang/glog",
 			"revision": "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
 			"revisionTime": "2016-01-25T20:49:56Z"
-		},
-		{
-			"checksumSHA1": "oDsOWp1nBMGpQ9gCFnczGADwZTE=",
-			"path": "github.com/gorilla/mux",
-			"revision": "0a192a193177452756c362c20087ddafcf6829c4",
-			"revisionTime": "2016-09-02T15:33:43Z"
 		},
 		{
 			"checksumSHA1": "FZ0r4TzEy9UxXLkFVXFygApni4M=",
@@ -31,12 +19,6 @@
 			"path": "github.com/spf13/pflag",
 			"revision": "5ccb023bc27df288a957c5e994cd44fd19619465",
 			"revisionTime": "2016-10-24T13:13:51Z"
-		},
-		{
-			"checksumSHA1": "SPMXWeoFQa5z0pLPmqpcFzyHqQQ=",
-			"path": "gopkg.in/yaml.v2",
-			"revision": "31c299268d302dd0aa9a0dcf765a3d58971ac83f",
-			"revisionTime": "2016-09-12T16:56:03Z"
 		}
 	],
 	"rootPath": "github.com/codeflavor/servops"
