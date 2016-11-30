@@ -77,10 +77,6 @@ func saveDefaults(c *c.AppConfig) error {
 	}
 
 	_, err = handler.Write(encodeConf)
-	glog.V(0).Infof("this is the conf: %#v", c.ConfFile)
-	glog.V(0).Infof("the err: %#v", err)
-	glog.V(0).Infof("the encoded: %#v", handler)
-
 	if err != nil {
 		return err
 	}

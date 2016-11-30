@@ -26,10 +26,11 @@ func StartServer(conf *c.AppConfig) error {
 	// bind server according to specified configuration
 	http.HandleFunc("/", rootHandle)
 	// NOTE: this should be config assigned
-	APP_URI := fmt.Sprintf("%s:%s", conf.Host, conf.Port)
-	glog.V(0).Infof("Starting server on: %s", APP_URI)
+	appUri := fmt.Sprintf("%s:%s", conf.Host, conf.Port)
+	glog.V(0).Infof("Starting server on: %s", appUri)
+	glog.V(0).Infof("this is the conf :%#v", conf)
 
-	if err := http.ListenAndServe(APP_URI, nil); err != nil {
+	if err := http.ListenAndServe(appUri, nil); err != nil {
 		return err
 	}
 	return nil
