@@ -82,3 +82,7 @@ func saveDefaults(c *c.AppConfig) error {
 	}
 	return nil
 }
+
+func setGlogLevel(conf c.AppConfig) {
+
+}

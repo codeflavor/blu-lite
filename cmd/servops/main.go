@@ -23,6 +23,6 @@ defaults.
 }
 
 func main() {
-	RootCmd.AddCommand(cmd.StartCommand)
+	RootCmd.AddCommand(cmd.StartCmd)
 	RootCmd.Execute()
 }
