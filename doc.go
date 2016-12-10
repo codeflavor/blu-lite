@@ -1,3 +1,3 @@
-// servops - an application that streamlines resolvment of roadblocks within a
+// Package servops - an application that streamlines resolvement of roadblocks within a
 // project.
 package servops

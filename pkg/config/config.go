@@ -1,5 +1,13 @@
 package config
 
+import (
+	"log"
+	"os"
+	"path/filepath"
+
+	"github.com/spf13/viper"
+)
+
 type dbDriver string
 
 const (
@@ -7,8 +15,8 @@ const (
 	DefaultPort       = "8080"
 	DefaultHost       = "127.0.0.1"
 	DefaultDBHost     = "127.0.0.1"
+	DefaultConfFile   = "servops"
 	DefaultConfDir    = "config.servops"
-	DefaultFile       = "servops.yaml"
 	DefaultDBUser     = "user"
 	DefaultDBPassword = "password"
 	DefaultDBName     = "servops"
@@ -16,6 +24,28 @@ const (
 	DefaultDBURL    = ""
 	DefaultLogLevel = 0
 )
+
+// LoadConfig loads the configuration specified or generates defaults if a
+// current one doesn't exist
+func LoadConfig(dir, loglevel string) {
+	cwd, err := os.Getwd()
+	if err != nil {
+		log.Panic(err)
+	}
+	var confDir string
+
+	if dir == "" {
+		confDir = filepath.Join(cwd, DefaultConfDir)
+	} else {
+		confDir = filepath.Join(dir, DefaultConfDir)
+	}
+
+	viper.AddConfigPath(confDir)
+	viper.SetConfigName(DefaultConfFile)
+	if err := viper.ReadInConfig(); err != nil {
+		log.Panic(err)
+	}
+}
 
 // AppConfig holds the application configuration and also encompasses the
 // database configuration.
