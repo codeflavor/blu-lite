@@ -13,9 +13,9 @@ var RootCmd = &cobra.Command{
 	Example: `
 Specify the application working directory with servops start
 --workdir=/path/to/dir. The application will try to find and validate the
-config.yml file in the specified working directory. If validation fails, it
-will exist with an error. If no config file is found, it will generate one with
-defaults.
+configuration file in the specified working directory. If validation fails, it
+will exist with an error.
+If no config file is found, it will generate one with defaults.
 `,
 	Run: func(command *cobra.Command, args []string) {
 		command.Help()
