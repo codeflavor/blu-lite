@@ -17,7 +17,7 @@ var StartCmd = &cobra.Command{
 	Use:   "start",
 	Short: "Start the application",
 	Run: func(command *cobra.Command, args []string) {
-		c.LoadConfig(workDir, logLevel)
+		c.LoadCfg(workDir, logLevel)
 	},
 }
 
