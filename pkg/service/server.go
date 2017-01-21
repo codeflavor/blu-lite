@@ -9,16 +9,17 @@ import (
 	c "github.com/codeflavor/servops/pkg/config"
 )
 
+type HTTPService struct {
+	config *c.AppConfig
+}
+
 func rootHandle(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Welcome to ServOps API")
 }
 
-// StartServer instantiates a new server connection
-func StartServer(conf *c.AppConfig) error {
+// Start instantiates a new server connection
+func (h *HTTPService) Start() error {
 	glog.V(0).Info("Trying to start Database instance...")
-	if err := InstatiateDBService(conf); err != nil {
-		return fmt.Errorf("error: An error occured while instantiating the database service: %v", err)
-	}
 	// NOTE: by the time we get here, we should already have a config either self
 	// generated, or user set,
 	// loaded API resources
@@ -34,3 +35,9 @@ func StartServer(conf *c.AppConfig) error {
 	}
 	return nil
 }
+
+func (s *HTTPService) Status() ([]Status, error) {
+
+}
+
+func (s *HTTPService) Stop() error {}
